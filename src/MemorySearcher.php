@@ -193,6 +193,7 @@ final class MemorySearcher implements SearcherInterface
                     throw new \RuntimeException('Nested fields are not supported yet.');
                 }
 
+                /** @var list<string|int|float|bool> $values */
                 $values = (array) ($document[$filter->field] ?? []);
 
                 if ([] === \array_intersect($filter->values, $values)) {
@@ -203,6 +204,7 @@ final class MemorySearcher implements SearcherInterface
                     throw new \RuntimeException('Nested fields are not supported yet.');
                 }
 
+                /** @var list<string|int|float|bool> $values */
                 $values = (array) ($document[$filter->field] ?? []);
 
                 if ([] !== \array_intersect($filter->values, $values)) {
