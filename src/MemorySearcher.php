@@ -552,9 +552,7 @@ final class MemorySearcher implements SearcherInterface
                             };
                         }
 
-                        if (!isset($facets[$facet->field]['count'][$value])) {
-                            $facets[$facet->field]['count'][$value] = 0;
-                        }
+                        $facets[$facet->field]['count'][$value] ??= 0;
 
                         ++$facets[$facet->field]['count'][$value];
                     }
